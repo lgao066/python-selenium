@@ -5,10 +5,10 @@ python -m unittest
 
 #### If you want to run just a class, you should type: 
 ```sh
-python -m unittest tests.test_sign_in_page.TestSignInPage
+python3 -m unittest tests.test_shop_page.TestContactPage
 ```
 
 #### If you want to run just a test method, you should type: 
 ```sh
-python -m unittest tests.test_sign_in_page.TestSignInPage.test_page_load
+python3 -m unittest tests.test_shop_page.TestShopPage.test_4_purchase_products
 ```
