@@ -4,7 +4,6 @@ from pages.cart_page import *
 
 
 class TestShopPage(BaseTest):
-
     def test_4_purchase_products(self):
         ShopPage = HomePage(self.driver).click_shop_page()
         ShopPage.wait_element(*ShopPageLocators.PRODUCT1)

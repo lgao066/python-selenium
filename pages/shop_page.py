@@ -1,6 +1,7 @@
 from pages.base_page import BasePage
 from locators.locators import *
 
+
 class ShopPage(BasePage):
     def __init__(self, driver):
         self.locator = ShopPageLocators

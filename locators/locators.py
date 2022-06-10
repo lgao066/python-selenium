@@ -1,5 +1,6 @@
 from selenium.webdriver.common.by import By
 
+
 class HomePageLocators(object):
     STARTSHOPPING = (By.XPATH, '//a[contains(.,"Shopping")]') 
     HOME = (By.ID, 'nav-home')
@@ -7,6 +8,7 @@ class HomePageLocators(object):
     CONTACT = (By.ID, 'nav-contact')
     LOGIN = (By.ID, 'nav-login')
     CART = (By.ID, 'nav-cart')
+
 
 class ContactPageLocators(object):
     FORENAME = (By.ID, 'forename')
@@ -24,10 +26,12 @@ class ContactPageLocators(object):
     TELEPHONE_ERROR = (By.ID, 'telephone-err')
     PROGRESS = (By.XPATH, '//div[@class="progress progress-info wait"]')
 
+
 class ShopPageLocators(object):
     PRODUCT1 = (By.ID, 'product-1')
     BUY_FUNNY_COW = (By.XPATH, '//*[.="Funny Cow"]/..//a[contains(@class, btn)]')
     BUY_FLUFFY_BUNNY = (By.XPATH, '//*[.="Fluffy Bunny"]/..//a[contains(@class, btn)]')
+
 
 class CartPageLocators(object):
     CHECKOUT = (By.XPATH, '//a[contains(.,"Check Out")]')

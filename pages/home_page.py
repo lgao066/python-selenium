@@ -6,8 +6,7 @@ from pages.cart_page import CartPage
 from locators.locators import *
 
 
-class HomePage(BasePage):
-    
+class HomePage(BasePage):  
     def __init__(self, driver):
         self.locator = HomePageLocators
         super().__init__(driver)  # Python3 version

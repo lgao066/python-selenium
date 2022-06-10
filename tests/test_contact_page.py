@@ -2,8 +2,8 @@ from tests.base_test import BaseTest
 from pages.contact_page import *
 from pages.home_page import *
 
-class TestContactPage(BaseTest):
 
+class TestContactPage(BaseTest):
     def test_0_page_load(self):
         contactPage = HomePage(self.driver).click_contact_page()
         contactPage.wait_element(*ContactPageLocators.FORENAME)
