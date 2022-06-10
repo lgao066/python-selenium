@@ -1,7 +1,8 @@
 import unittest
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
-
+from webdriver_manager.chrome import ChromeDriverManager
+from data import base_url
 
 # I am using python unittest for asserting cases.
 # In this module, there should be test cases.
@@ -18,14 +19,16 @@ class BaseTest(unittest.TestCase):
         options.add_argument("--start-fullscreen")
         options.add_argument('--disable-gpu')
 
-        self.driver = webdriver.Chrome(options=options)
+        # self.driver = webdriver.Chrome(options=options)
+        self.driver = webdriver.Chrome(ChromeDriverManager().install())
+        self.driver.maximize_window()
         # self.driver = webdriver.Firefox()
-        self.driver.get("http://www.amazon.com")
+        self.driver.get(base_url.base_url)
 
     def tearDown(self):
         self.driver.close()
 
 
 if __name__ == "__main__":
-    suite = unittest.TestLoader().loadTestsFromTestCase(TestPages)
+    suite = unittest.TestLoader().loadTestsFromTestCase()
     unittest.TextTestRunner(verbosity=1).run(suite)
