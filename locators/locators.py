@@ -42,7 +42,6 @@ class CartPageLocators(object):
 
 
 class LoginPageLocators(object):
-    TITLE = (By.XPATH, '//*[contains(@class,"pop")]//h1[.="Login"]')
     USERNAME = (By.ID, 'loginUserName')
     PASSWORD = (By.ID, 'loginPassword')
     LOGIN = (By.ID, '//*[contains(@class,"pop")]//button[.="Login"]')
